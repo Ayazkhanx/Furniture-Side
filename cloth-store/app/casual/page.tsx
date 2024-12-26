@@ -72,7 +72,7 @@ export default function CasualPage() {
               <Slider
                 getAriaLabel={() => 'Price range'}
                 value={value}
-                valueLabelDisplay="auto"
+                valueLabelDisplay="auto" onChange={handleValue}
               />
             </Box>
           </div>
