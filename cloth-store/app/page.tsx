@@ -1,5 +1,5 @@
 import React from 'react'
-import pic from '../public/1.15.jpg'; 
+//import pic from '../public/1.15.jpg'; 
 import { Button } from '@/components/ui/button';
 import pic1 from '../public/1.11.png'
 import pic2 from '../public/1.12.png'

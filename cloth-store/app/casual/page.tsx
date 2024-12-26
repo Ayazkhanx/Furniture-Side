@@ -10,7 +10,7 @@ import pic6 from '../../public/1.11.png'
 import pic7 from '../../public/1.10.png'
 import pic8 from '../../public/1.9.png'
 import pic9 from '../../public/1.8.png'
-import { MdKeyboardArrowUp, MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { VscSettings } from "react-icons/vsc";
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
