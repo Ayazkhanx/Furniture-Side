@@ -36,14 +36,14 @@ function TshirtPage() {
       <div className="grid grid-cols-12 gap-6 p-10">
   {/* Image Gallery (2 columns) */}
   <div className="col-span-2 space-y-2 flex flex-col">
-  <img src="1.2.png" alt="Image 1" className="w-[300px] h-[130px] object-cover rounded-md "/>
-      <img src="1.1.png" alt="Image 2" className="w-[300px] h-[160px] object-cover rounded-md" />
-      <img src="1.2.png" alt="Image 3" className="rounded:md w-[300px] h-[130px] object-cover" />
+  <Image src="1.2.png" alt="Image 1" className="w-[300px] h-[130px] object-cover rounded-md "/>
+      <Image src="1.1.png" alt="Image 2" className="w-[300px] h-[160px] object-cover rounded-md" />
+      <Image src="1.2.png" alt="Image 3" className="rounded:md w-[300px] h-[130px] object-cover" />
   </div>
 
   {/* Main Image (4 columns) */}
   <div className="col-span-4 flex flex-col">
-  <img src="1.2.png" alt="Image 1" className="rounded object-cover" width={300} height={100}/>
+  <Image src="1.2.png" alt="Image 1" className="rounded object-cover" width={300} height={100}/>
   </div>
 
   {/* Product Info Section (5 columns) */}

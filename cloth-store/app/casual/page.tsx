@@ -32,6 +32,10 @@ export default function CasualPage() {
 
   const [value, setValue] = useState([50, 140]);
 
+  const handleValue = () => {
+    setValue([50, 140]);
+  }
+
   return (
     <div className='p-6 m-10'>
       {/* Filter Section */}
