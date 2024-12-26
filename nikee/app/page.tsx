@@ -160,7 +160,7 @@ export default function Home() {
       {/* Home7 */}
       <div className='grid-rows-3 p-8 m-2'>
         <div className='flex'>
-          <h1 className='font-bold'>Don't Miss</h1>
+          <h1 className='font-bold'>Don`t Miss</h1>
         </div>
         <div>
           <Image src={pic10} alt="" className='rounded-md'/>
@@ -220,9 +220,9 @@ export default function Home() {
             <div className='grid-cols-1 grid gap-4'>
               <h1 className='text-black font-bold'>Kids</h1>
               <p>Infant & Toddlers Shoes</p>
-              <p>Kid's Shoes</p>
-              <p>Kid's Jordan Shoes</p>
-              <p>Kid's Basketball Shoes</p>
+              <p>Kid`s Shoes</p>
+              <p>Kid`s Jordan Shoes</p>
+              <p>Kid`s Basketball Shoes</p>
             </div>
           </div>
         </div>

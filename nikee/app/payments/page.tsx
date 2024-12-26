@@ -22,12 +22,12 @@ export default function page() {
         {/* Main Content (8 columns) */}
         <div className='col-span-8'>
           <div className='grid gap-4'>
-            <h1 className='text-3xl font-bold'>WHAT PAYMENT OPTIONS CAN I USE ON NIKE ORDERS?</h1>
+            <h1 className='text-3xl font-bold'>`WHAT PAYMENT OPTIONS CAN I USE ON NIKE ORDERS?`</h1>
             <p>We want to make buying your favourite Nike shoes and gear online fast and easy, and we accept the 
                 following payment options:</p>
 
             <p>Visa, Mastercard, Diners Club, Discover, American Express, Visa Electron, Maestro</p>
-            <p>If you enter your PAN information at checkout, you'll be able to pay for your order with PayTM 
+            <p>If you enter your PAN information at checkout, you`ll be able to pay for your order with PayTM 
                 or a local credit or debit card.</p>
 
             <button className='border p-2 rounded mb-4 h-auto'>Apply Now</button>
@@ -35,7 +35,7 @@ export default function page() {
             <div className='grid gap-4'>
               <div className='flex'>
                 <span className='font-bold'>Nike Members </span> <h1> can store multiple debit or credit cards 
-                in their profile for faster checkout. If you're not already a Member, join us today.</h1>
+                in their profile for faster checkout. If you`re not already a Member, join us today.</h1>
               </div>
 
               <div className='flex gap-4'>
@@ -45,7 +45,7 @@ export default function page() {
             </div>
 
             <div>
-              <h1 className='font-bold text-lg'> FAQ'S</h1>
+              <h1 className='font-bold text-lg'> FAQ`S</h1>
 
               <div>
                 <h1> <span>Does my card need international purchases enabled?</span>
@@ -58,7 +58,7 @@ export default function page() {
 
             <div>
               <h1><span>Can I pay for my order with multiple methods?</span>
-                No, payment for Nike orders can't be split between multiple payment methods.</h1>
+                No, payment for Nike orders can`t be split between multiple payment methods.</h1>
             </div>
 
             <div>
@@ -67,10 +67,10 @@ export default function page() {
             </div>
 
             <div>
-              <h1><span>Why don't I see Apple Pay as an option?</span>
-                To see Apple Pay as an option in the Nike App or on Nike.com, you'll need to use a 
+              <h1><span>Why don`t I see Apple Pay as an option?</span>
+                To see Apple Pay as an option in the Nike App or on Nike.com, you`ll need to use a 
                 compatible Apple device running the latest OS, be signed in to your iCloud account and have a supported card in 
-                your Wallet. Additionally, you'll need to use Safari to use Apple Pay on Nike.com.
+                your Wallet. Additionally, you`ll need to use Safari to use Apple Pay on Nike.com.
               </h1>
             </div>
 
@@ -83,7 +83,7 @@ export default function page() {
 
               <div>
                 <h1>RELATED</h1>
-                <h1>WHAT ARE NIKE'S DELIVERY OPTIONS?</h1>
+                <h1>WHAT ARE NIKE`S DELIVERY OPTIONS?</h1>
                 <h1>HOW DO I GET FREE DELIVERY ON NIKE ORDERS?</h1>
               </div>
             </div>
