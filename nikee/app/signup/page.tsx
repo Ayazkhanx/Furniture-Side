@@ -100,7 +100,7 @@ export default function Example() {
                 </div>
 
                 <div className="flex justify-center items-center py-4 px-11 text-gray-500">
-                    <h1>By logging in, you agree to Nike's <span className="underline"> Privacy Policy</span>  and 
+                    <h1>By logging in, you agree to Nike`s <span className="underline"> Privacy Policy</span>and 
                     <span className="underline">Terms of Use.</span> </h1>
                 </div>
                 <button
