@@ -86,7 +86,7 @@ export default function page() {
       
             {/* Right side: Image */}
             <div className="grid col-span-1 pb-0 bg-white">
-              <img src='1.15.jpg' alt="Stylish Clothes"/>
+              <Image src={pic} alt="Stylish Clothes"/>
             </div>
           </div>
 
