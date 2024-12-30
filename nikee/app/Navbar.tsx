@@ -3,13 +3,14 @@ import Link from 'next/link'
 import { IoBagOutline } from "react-icons/io5"
 import { CiHeart } from "react-icons/ci";
 import logo from '../public/Vector (1).png'
+import Image from 'next/image';
 
 
 export default function Navbar() {
   return (
     <div className='flex justify-between items-center h-20 p-5'>
       <div>
-        <img src="Vector (1).png" alt="" />
+      <Image src={logo} alt="" />
       </div>
 
       <div className='flex font-bold gap-4'>
