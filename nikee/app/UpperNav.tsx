@@ -7,7 +7,10 @@ export default function UpperNav() {
   return (
     <div className='flex h-12 items-center bg-[#e5e5e5] justify-between p-5'>
       <div>
+        <Link href={'/'}>
         <Image src={logo} alt="" />
+        </Link>
+        
       </div>
       <div className='flex gap-4 '>
         <h1>Find a store</h1>
