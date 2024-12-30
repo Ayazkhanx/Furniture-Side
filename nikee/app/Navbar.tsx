@@ -2,13 +2,14 @@ import React from 'react'
 import Link from 'next/link'
 import { IoBagOutline } from "react-icons/io5"
 import { CiHeart } from "react-icons/ci";
+import logo from '../public/Vector (1).png'
 
 
 export default function Navbar() {
   return (
     <div className='flex justify-between items-center h-20 p-5'>
       <div>
-        <h1>Logo</h1>
+        <img src="Vector (1).png" alt="" />
       </div>
 
       <div className='flex font-bold gap-4'>
@@ -20,8 +21,8 @@ export default function Navbar() {
         <Link href={''}>SNKRS</Link>
       </div>
 
-      <div className='flex gap-2'>
-        <input type="text"  className='bg-gray-300'/>
+      <div className='flex gap-2 items-center'>
+        <input type="text" placeholder='Search Here' className='bg-gray-200 h-10 w-64 rounded-lg'/>
         <CiHeart />
         <IoBagOutline />
 

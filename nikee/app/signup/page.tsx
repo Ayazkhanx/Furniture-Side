@@ -4,7 +4,9 @@ export default function Example() {
         
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 border py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            
+            <div className="flex items-center justify-center">
+            <img src="Vector (1).png" alt=""  />
+            </div>
             <h2 className="mt-10 text-center text-2xl/9 font-extrabold tracking-tight text-gray-900">
             BECOME A NIKE MEMBER
             </h2>
@@ -114,7 +116,7 @@ export default function Example() {
   
             <p className="mt-10 text-center text-sm/6 text-gray-500">
               Already member?{' '}
-              <a href="#" className="font-semibold text-gray-500 underline">
+              <a href="signin" className="font-semibold text-gray-500 underline">
                 Login Now
               </a>
             </p>

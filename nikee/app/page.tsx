@@ -4,12 +4,12 @@ import Image from 'next/image'
 import pic1 from '../public/3.1.png'
 import pic3 from '../public/3.2.png'
 import pic2 from '../public/3.3.png'
-// import pic4 from '../public/3.4.png'
+import pic4 from '../public/3.4.png'
 import pic5 from '../public/3.5.jpg'
-// import pic6 from '../public/3.6.png'
-// import pic7 from '../public/3.7.png'
-// import pic8 from '../public/3.8.png'
-// import pic9 from '../public/3.9.png'
+import pic6 from '../public/3.6.png'
+import pic7 from '../public/3.7.png'
+import pic8 from '../public/3.8.png'
+import pic9 from '../public/3.9.png'
 import pic10 from '../public/3.10.png'
 import pic11 from '../public/3.11.png'
 import pic12 from '../public/3.12.png'
@@ -19,15 +19,22 @@ import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 
 export default function Home() {
   const products = [
-    { name: 'Nike Air max Shoe', category: `women's Shoes`, id:1, price: '$120', image: pic2 },
-    { name: 'Nike Air 69 Shoe', category: `men's Shoes`, id:2, price: '$120', image: pic3 },
-    { name: 'Nike Air 96 Shoe', category: `men's Shoes`, id:3, price: '$120', image: pic14 }
+    { name: 'Nike Air max Shoe', category: `women's Shoes`, id:1, price: '$120', image: pic6 },
+    { name: 'Nike Air 69 Shoe', category: `men's Shoes`, id:2, price: '$120', image: pic7 },
+    { name: 'Nike Air 96 Shoe', category: `men's Shoes`, id:3, price: '$120', image: pic8 },
+    { name: 'Nike Air 97 Shoe', category: `women's Shoes`, id:4, price: `$120`, image: pic9 }
   ]
 
-  const images = [
-    { image: pic11, id:1, name: `Man's` },
-    { image: pic12, id:2, name: `Man's` },
-    { image: pic13, id:3, name: `Women's` }
+  const products2 = [
+    { image: pic2, id:5, category: `Man's`, name:'Nike Air max Shoe', price: `$120`},
+    { image: pic3, id:6, category: `Man's`,  name:'Nike Air max Shoe', price: `$120`},
+    { image: pic4, id:7, category: `Women's`, name:'Nike Air max Shoe', price: `$120`}
+  ]
+
+  const product3 = [
+    { name: ` Man's`, id: 8, image: pic11 },
+    { name: ` Man's`, id: 9, image: pic12 },
+    { name: ` Woman's`, id: 10, image: pic12 }
   ]
 
 
@@ -57,12 +64,13 @@ export default function Home() {
         <div className='flex justify-center items-center'>
           <h1 className='text-5xl font-semibold'>Nike Air Max Pulse</h1>
         </div>
-        <div className='justify-center items-center flex'>
-          <p>Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pulse—designed to push you past your limits and help you go to the max.</p>
+        <div className='justify-center items-center text-2xl flex '>
+          <p>Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pulse—designed to push you 
+            past your limits and help you go to the max.</p>
         </div>
         <div className='flex gap-4 justify-center items-center'>
-          <Button className='rounded-md'>Notify me</Button>
-          <Button className='rounded-lg'>Show Air Max</Button>
+          <Button className='rounded-md text-white bg-black'>Notify me</Button>
+          <Button className='rounded-md text-white bg-black'>Show Air max</Button>
         </div>
       </div>
 
@@ -77,7 +85,7 @@ export default function Home() {
           </div>
         </div>
         <div className='grid grid-cols-3 gap-4 mt-4'>
-          {products.map((product) => (
+          {products2.map((product) => (
             <div key={product.id} className='flex flex-col border-gray-400 rounded-md'>
               <Image src={product.image} alt=''/>
               <div className='flex flex-col justify-center items-center'>
@@ -98,7 +106,7 @@ export default function Home() {
         <div>
           <Image src={pic5} alt="" className='rounded-md'/>
         </div>
-        <div className='gap-4 grid pt-6'>
+        <div className='gap-6 grid pt-6'>
           <div className='flex justify-center items-center'>
             <h1 className='text-4xl font-bold'>STEP INTO WHAT FEELS GOOD</h1>
           </div>
@@ -106,13 +114,13 @@ export default function Home() {
             <p>Cause everyone should know the feeling of running in that perfect pair.</p>
           </div>
           <div className='flex justify-center items-center'>
-            <Button>Find Your Shoes</Button>
+            <Button className='bg-black text-white'>Find Your Shoes</Button>
           </div>
         </div>
       </div>
 
       {/* Home6 */}
-      <div className='p-8'>
+      <div className='p-10'>
         <div>
           <h1 className='font-bold text-xl'>Gear Up</h1>
         </div>
@@ -165,15 +173,15 @@ export default function Home() {
         <div>
           <Image src={pic10} alt="" className='rounded-md'/>
         </div>
-        <div>
-          <div className='flex justify-center pt-6 items-center'>
+        <div className='space-y-6'>
+          <div className='flex justify-center pt-8 items-center'>
             <h1 className='text-5xl font-bold'>FLIGHT ESSENTIALS</h1>
           </div>
           <div className='flex justify-center items-center'>
             <p>Your built-to-last, all-week wears—but with style only Jordan Brand can deliver.</p>
           </div>
           <div className='flex justify-center items-center'>
-            <Button>Shop</Button>
+            <Button className='bg-black text-white'>Shop</Button>
           </div>
         </div>
       </div>
@@ -182,15 +190,16 @@ export default function Home() {
       <div className='p-10 mt-4'>
         <h1 className='font-extrabold'>The Essentials</h1>
         <div className='flex gap-4 mt-6'>
-          {images.map((image) => (
-            <div key={image.id} className="relative group">
+          {product3.map((product) => (
+            <div key={product.id} className="relative group">
               <Image 
-                src={image.image} 
-                alt={image.name}
+                src={product.image} 
+                alt={product.name}
                 width={600} 
                 className="h-auto rounded"
               />
-              <h2 className="absolute bottom-4 right-4 bg-white rounded-md text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">{image.name}</h2>
+              <h2 className="absolute bottom-4 right-4 bg-white rounded-md
+               text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">{product.name}</h2>
             </div>
           ))}
         </div>
