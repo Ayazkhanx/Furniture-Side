@@ -14,8 +14,8 @@ import pic10 from '../public/3.10.png'
 import pic11 from '../public/3.11.png'
 import pic12 from '../public/3.12.png'
 import pic13 from '../public/3.13.png'
-import pic14 from '../public/3.4.png'
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
+
 
 export default function Home() {
   const products = [
@@ -34,7 +34,7 @@ export default function Home() {
   const product3 = [
     { name: ` Man's`, id: 8, image: pic11 },
     { name: ` Man's`, id: 9, image: pic12 },
-    { name: ` Woman's`, id: 10, image: pic12 }
+    { name: ` Woman's`, id: 10, image: pic13 }
   ]
 
 
