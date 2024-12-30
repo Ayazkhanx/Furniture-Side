@@ -34,61 +34,61 @@ function TshirtPage() {
   return (
     <div className="p-10 m-10">
       {/* Tshirt Product Section */}
+{/* Tshirt Product Section */}
 <div className="grid grid-cols-12 gap-6 p-10">
 
-{/* Image Gallery (2 columns) */}
-<div className="col-span-12 lg:col-span-2 space-y-2 flex flex-col">
-  <Image src={pic2} alt="Image 1" className="w-full sm:w-[300px] h-[130px] object-cover rounded-md" />
-  <Image src={pic1} alt="Image 2" className="w-full sm:w-[300px] h-[160px] object-cover rounded-md" />
-  <Image src={pic2} alt="Image 3" className="w-full sm:w-[300px] h-[130px] object-cover rounded-md" />
-</div>
-
-{/* Main Image (4 columns) */}
-<div className="col-span-12 lg:col-span-4 flex flex-col">
-  <Image src={pic2} alt="Image 1" className="rounded object-cover w-full sm:w-[300px] h-[300px] object-cover" />
-</div>
-
-{/* Product Info Section (5 columns) */}
-<div className="col-span-12 lg:col-span-5 px-6 flex flex-col justify-between min-h-full">
-  <h1 className="text-3xl sm:text-4xl font-extrabold">One Life Graphic T-shirt</h1>
-  <h2 className="text-2xl sm:text-3xl">$260</h2>
-  <p className='text-gray-400 text-sm sm:text-base'>
-    This graphic t-shirt is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.
-  </p>
-
-  {/* Size Selection */}
-  <div>
-    <p>Choose size</p>
-    <div className="flex gap-4">
-      <Button className="w-1/2 sm:w-auto">Small</Button>
-      <Button className="w-1/2 sm:w-auto">Medium</Button>
-      <Button className="w-1/2 sm:w-auto">Large</Button>
-      <Button className="w-1/2 sm:w-auto">X-Large</Button>
-    </div>
+  {/* Image Gallery (2 columns) */}
+  <div className="col-span-12 lg:col-span-2 space-y-2 flex flex-col">
+    <Image src={pic2} alt="Image 1" className="w-full sm:w-[300px] h-[130px] object-cover rounded-md" />
+    <Image src={pic1} alt="Image 2" className="w-full sm:w-[300px] h-[160px] object-cover rounded-md" />
+    <Image src={pic2} alt="Image 3" className="w-full sm:w-[300px] h-[130px] object-cover rounded-md" />
   </div>
 
-  {/* Quantity and Add to Cart */}
-  <div className="flex flex-col sm:flex-row gap-4 items-center justify-center ">
-    <div className="flex items-center gap-2">
-      <button className="bg-gray-400 rounded p-2" onClick={handleMinus}>
-        <HiMiniMinusSmall />
-      </button>
-      <span>{count}</span>
-      <button className="bg-gray-400 rounded p-2" onClick={handlePlus}>
-        <GoPlus />
-      </button>
-      <div >
-      <Link href={'cart'}>
-      <Button className="w-full sm:w-auto mt-4 sm:mt-0">Add to Cart</Button>
-    </Link>
+  {/* Main Image (4 columns) */}
+  <div className="col-span-12 lg:col-span-4 flex flex-col">
+    <Image src={pic2} alt="Image 1" className="rounded w-full sm:w-[300px] h-[300px] object-cover" />
+  </div>
+
+  {/* Product Info Section (5 columns) */}
+  <div className="col-span-12 lg:col-span-5 px-6 flex flex-col border rounded-md justify-between py-4 min-h-full">
+    <h1 className="text-3xl sm:text-4xl font-extrabold">One Life Graphic T-shirt</h1>
+    <h2 className="text-2xl sm:text-3xl">$260</h2>
+    <p className='text-gray-400 text-sm sm:text-base'>
+      This graphic t-shirt is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.
+    </p>
+
+    {/* Size Selection */}
+    <div>
+      <p>Choose size</p>
+      <div className="flex gap-4 flex-wrap">
+        <Button className="w-1/2 sm:w-auto">Small</Button>
+        <Button className="w-1/2 sm:w-auto">Medium</Button>
+        <Button className="w-1/2 sm:w-auto">Large</Button>
+        <Button className="w-1/2 sm:w-auto">X-Large</Button>
       </div>
+    </div>
+
+    {/* Quantity and Add to Cart */}
+    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <div className="flex items-center gap-2">
+        <button className="bg-gray-400 rounded p-2" onClick={handleMinus}>
+          <HiMiniMinusSmall />
+        </button>
+        <span>{count}</span>
+        <button className="bg-gray-400 rounded p-2" onClick={handlePlus}>
+          <GoPlus />
+        </button>
+
+        <Link href={'cart'}>
+        <Button className="w-full sm:w-auto mt-4 sm:mt-0">Add to Cart</Button>
+      </Link>
+      </div>
+
       
     </div>
-
-   
   </div>
 </div>
-</div>
+
 
 
 

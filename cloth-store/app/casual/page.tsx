@@ -119,10 +119,10 @@ export default function CasualPage() {
 
         {/* Products Section */}
         <div className='lg:col-span-9 col-span-12'>
-          <h2 className='text-xl font-semibold mb-6'>Casual</h2>
+          <h2 className='text-2xl font-semibold'>Casual</h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
             {products.map((product) => (
-              <div key={product.id} className='text-center bg-white shadow-lg rounded-lg p-4'>
+              <div key={product.id} className='text-center bg-white rounded-md p-4'>
                 <Image
                   src={product.image}
                   alt={product.name}

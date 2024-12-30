@@ -22,12 +22,12 @@ export default function CartPage() {
   return (
     <div className="p-6 m-10">
       {/* Title */}
-      <div className="flex justify-start mb-8">
-        <h1 className="text-5xl font-extrabold">Your Cart</h1>
+      <div className="flex justify-start sm:justify-center sm:items-center mb-8">
+        <h1 className="text-5xl font-extrabold sm:text-center">Your Cart</h1>
       </div>
 
       {/* Cart Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-12 md:grid-cols-12 gap-8 ">
         {/* Products Section */}
         <div className="col-span-12 md:col-span-7 space-y-8">
           {[1, 2].map((item, index) => (
