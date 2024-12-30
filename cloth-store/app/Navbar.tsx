@@ -22,10 +22,10 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className='flex gap-8'>
-          <Link href='/shirt' className="hover:text-gray-600">Shop</Link>
-          <Link href='/sale' className="hover:text-gray-600">Sale</Link>
-          <Link href='/newArrivals' className="hover:text-gray-600">New Arrivals</Link>
-          <Link href='/brands' className="hover:text-gray-600">Brands</Link>
+          <Link href='shop' className="hover:text-gray-600">Shop</Link>
+          <Link href='sale' className="hover:text-gray-600">Sale</Link>
+          <Link href='newArrivals' className="hover:text-gray-600">New Arrivals</Link>
+          <Link href='brands' className="hover:text-gray-600">Brands</Link>
         </div>
 
         {/* Icons section for desktop */}
@@ -54,10 +54,10 @@ export default function Navbar() {
       {/* Mobile menu items */}
       {isMobileMenuOpen && (
         <div className="md:hidden flex flex-col items-center p-6 bg-white shadow-md">
-          <Link href='/shop' className="py-2 hover:text-gray-600">Shop</Link>
-          <Link href='/sale' className="py-2 hover:text-gray-600">Sale</Link>
-          <Link href='/newArrivals' className="py-2 hover:text-gray-600">New Arrivals</Link>
-          <Link href='/brands' className="py-2 hover:text-gray-600">Brands</Link>
+          <Link href='shop' className="py-2 hover:text-gray-600">Shop</Link>
+          <Link href='sale' className="py-2 hover:text-gray-600">Sale</Link>
+          <Link href='newArrivals' className="py-2 hover:text-gray-600">New Arrivals</Link>
+          <Link href='brands' className="py-2 hover:text-gray-600">Brands</Link>
         </div>
       )}
 

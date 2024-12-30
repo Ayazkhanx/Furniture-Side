@@ -1,5 +1,5 @@
 import React from 'react'
-//import pic from '../public/1.15.jpg'; 
+import pic from '../public/1.15.jpg'; 
 import { Button } from '@/components/ui/button';
 import pic1 from '../public/1.11.png'
 import pic2 from '../public/1.12.png'
@@ -14,6 +14,7 @@ import pic9 from '../public/1.6.png';
 import pic10 from '../public/1.5.png';
 import pic11 from '../public/1.3.png';
 import pic12 from '../public/1.4.png';
+import Link from 'next/link';
 
 export default function page() {
   const images = [
@@ -70,21 +71,22 @@ export default function page() {
 
   return (
     <div className=''>
-      <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 h-auto bg-[#F2F0F1] justify-center p-10 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 h-auto bg-[#F2F0F1] items-center justify-center px-10 ">
             
             {/* Left side: Text Content */}
-            <div className="grid col-span-1 gap-4">
-              <h1 className='text-6xl font-bold '>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+            <div className=" col-span-1 flex-col items-start space-y-4 flex ">
+              <h1 className='text-6xl font-extrabold '>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
               <p>
                 Browse through our diverse range of meticulously crafted garments, designed to bring out 
                 your individuality and cater to your sense of style.
               </p>
-              <Button> Shop Now</Button>
+              <Link href={'shop'} ><Button>Shop Now</Button></Link>
+              
             </div>
       
             {/* Right side: Image */}
-            <div className="grid col-span-1 bg-white">
-              <Image src='1.15.jpg' alt="Stylish Clothes"/>
+            <div className="grid col-span-1 pb-0 bg-white">
+              <img src='1.15.jpg' alt="Stylish Clothes"/>
             </div>
           </div>
 
@@ -101,10 +103,10 @@ export default function page() {
     <div className="p-10">
           
           <div className="flex items-center justify-center">
-            <h1 className="text-4xl p-6 font-extrabold">New Arrivals</h1>
+            <h1 className="text-5xl p-6 font-extrabold">New Arrivals</h1>
           </div>
     
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4  mt-8">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 items-center justify-center mt-8">
             {images.map((image) => (
               <div key={image.id} className="text-start ">
                 <Image 
@@ -112,7 +114,7 @@ export default function page() {
                   alt={image.name}
                   width={250} 
                   height={150}  
-                  className="object-cover rounded mb-4"
+                  className="object-cover rounded-md mb-4"
                 />
                 <h2 className="text-xl font-semibold">{image.name}</h2>
                 <p className="text-lg font-semibold">${image.price}</p>
@@ -125,12 +127,13 @@ export default function page() {
           </div>
         </div>
 
-        <div className='m-10'>
+        <div className='p-10'>
         <div className="flex items-center justify-center ">
-                <h1 className="text-4xl p-6 font-extrabold">Top Selling</h1>
+                <h1 className="text-5xl p-6 font-extrabold">Top Selling</h1>
               </div>
         
-              <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4  mt-8">
+              <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 
+              gap-4 items-center justify-center mt-8">
                 
                 {images.map((image) => (
                   <div key={image.id} className="text-start ">
@@ -139,7 +142,7 @@ export default function page() {
                       alt={image.name}
                       width={250} 
                       height={150} 
-                      className="object-cover rounded mb-4"
+                      className="object-cover rounded-md mb-4"
                     />
                     <h2 className="text-xl font-semibold">{image.name}</h2>
                     <p className="text-lg font-semibold">${image.price}</p>
@@ -152,57 +155,57 @@ export default function page() {
               </div>
               </div>
 
-              <div className="p-10 m-14 rounded bg-[#F0F0F0]">
+              <div className="p-10 m-10 rounded-md bg-[#F0F0F0]">
       {/* Header Section */}
-      <div className="flex justify-center p-8 items-center">
-        <h1 className="text-4xl font-bold">BROWSE BY DRESS STYLE</h1>
+      <div className="flex justify-center p-10 items-center">
+        <h1 className="text-3xl font-extrabold">BROWSE BY DRESS STYLE</h1>
       </div>
 
-      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4">
-        {/* First row of images */}
-        <div className="flex flex-wrap gap-4">
-          <div className="w-full sm:w-1/2 lg:w-1/2">
-            <Image
-              src={pic9}
-              alt="Dress Style 1"
-              width={450}
-              height={300}
-              className="rounded-lg w-full object-cover"
-            />
-          </div>
-          <div className="w-full sm:w-1/2 lg:w-1/2">
-            <Image
-              src={pic10}
-              alt="Dress Style 2"
-              width={450}
-              height={300}
-              className="rounded-lg w-full object-cover"
-            />
-          </div>
-        </div>
+      <div className="space-y-4">
+  {/* First row of images */}
+  <div className="flex flex-col lg:flex-row gap-4 h-auto">
+    <div className="w-full lg:w-1/3 h-auto">
+      <Image
+        src={pic9}
+        alt="Dress Style 1"
+        height={400}
+        className="rounded-lg w-full h-full object-cover"
+      />
+    </div>
+    <div className="w-full lg:w-2/3 h-auto">
+      <Image
+        src={pic10}
+        alt="Dress Style 2"
+        height={400}
+        className="rounded-lg w-full h-full object-cover"
+      />
+    </div>
+  </div>
 
-        {/* Second row of images */}
-        <div className="flex flex-wrap gap-4">
-          <div className="w-full sm:w-full lg:w-2/3">
-            <Image
-              src={pic12}
-              alt="Dress Style 3"
-              width={900}
-              height={600}
-              className="object-cover rounded-lg w-full"
-            />
-          </div>
-          <div className="w-full sm:w-full lg:w-1/3">
-            <Image
-              src={pic11}
-              alt="Dress Style 4"
-              width={450}
-              height={300}
-              className="object-cover rounded-lg w-full"
-            />
-          </div>
-        </div>
-      </div>
+  {/* Second row of images */}
+  <div className="flex flex-col lg:flex-row gap-4 h-auto">
+    <div className="w-full lg:w-2/3 h-auto">
+      <Image
+        src={pic12}
+        alt="Dress Style 3"
+        width={900}
+        height={400}
+        className="rounded-lg w-full h-full object-cover"
+      />
+    </div>
+    <div className="w-full lg:w-1/3 h-auto">
+      <Image
+        src={pic11}
+        alt="Dress Style 4"
+        width={450}
+        height={450}
+        className="rounded-lg w-full h-full object-cover"
+      />
+    </div>
+  </div>
+</div>
+
+
     </div>
 
     <div className="grid grid-cols-12 gap-4 m-12 p-6 bg-black text-white rounded-md">
@@ -214,13 +217,13 @@ export default function page() {
           </div>
     
           {/* Input and Button Section: Takes 6 columns */}
-          <div className="col-span-12 lg:col-span-6 justify-center items-center p-4">
+          <div className="col-span-12 lg:col-span-6 justify-center items-center space-y-2 p-4 ">
             <input
               type="text"
               className="w-full p-2 rounded-lg text-black"
               placeholder="Enter your email"
             />
-            <Button className="rounded bg-white w-full p-2 text-black m-2">Subscribe Now</Button>
+            <Button className="rounded-lg bg-white w-full p-2 text-black ">Subscribe Now</Button>
           </div>
         </div>
 

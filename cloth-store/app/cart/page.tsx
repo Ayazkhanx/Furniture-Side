@@ -124,15 +124,15 @@ export default function CartPage() {
         </div>
 
         {/* Input and Button Section */}
-        <div className="col-span-12 lg:col-span-6 justify-center items-center p-4">
-          <input
-            type="text"
-            className="w-full p-2 rounded-lg text-black"
-            placeholder="Enter your email"
-          />
-          <Button className="rounded bg-white w-full p-2 text-black m-2">Subscribe Now</Button>
-        </div>
-      </div>
+        <div className="col-span-12 lg:col-span-6 justify-center items-center space-y-2 p-4 ">
+                    <input
+                      type="text"
+                      className="w-full p-2 rounded-lg text-black"
+                      placeholder="Enter your email"
+                    />
+                    <Button className="rounded-lg bg-white w-full p-2 text-black ">Subscribe Now</Button>
+                  </div>
+                </div>
     </div>
   );
 }
