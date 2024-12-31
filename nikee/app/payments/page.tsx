@@ -20,7 +20,7 @@ export default function page() {
       {/* Second Row - Main Content (8 columns) and Sidebar (4 columns) */}
       <div className='grid grid-cols-12 gap-4 pt-6'>
         {/* Main Content (8 columns) */}
-        <div className='col-span-8'>
+        <div className='col-span-12 lg:col-span-8'>
           <div className='grid gap-4'>
             <h1 className='text-3xl font-bold'>`WHAT PAYMENT OPTIONS CAN I USE ON NIKE ORDERS?`</h1>
             <p>We want to make buying your favourite Nike shoes and gear online fast and easy, and we accept the 
@@ -30,7 +30,7 @@ export default function page() {
             <p>If you enter your PAN information at checkout, you`ll be able to pay for your order with PayTM 
                 or a local credit or debit card.</p>
 
-            <button className='border p-2 rounded mb-4 h-auto'>Apply Now</button>
+            <button className='border p-2 rounded mb-4 bg-black text-white'>Apply Now</button>
 
             <div className='grid gap-4'>
               <div className='flex'>
@@ -39,8 +39,8 @@ export default function page() {
               </div>
 
               <div className='flex gap-4'>
-                <Button className='rounded-md'>JOIN US</Button>
-                <Button className='rounded-md'>SHOP NIKE</Button>
+                <Button className='rounded-md bg-black text-white'>JOIN US</Button>
+                <Button className='rounded-md  bg-black text-white'>SHOP NIKE</Button>
               </div>
             </div>
 
@@ -91,7 +91,7 @@ export default function page() {
         </div>
 
         {/* Sidebar (4 columns for contact info, mobile icons, etc.) */}
-        <div className='col-span-4'>
+        <div className='lg:col-span-4 col-span-12'>
   <div className='grid gap-6 px-4'>
     {/* Mobile Number Section */}
 

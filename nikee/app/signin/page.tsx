@@ -75,7 +75,7 @@ export default function Example() {
   
             <p className="mt-10 text-center text-sm/6 text-gray-500">
               Not a member?{' '}
-              <a href="#" className="font-semibold text-gray-500 unde">
+              <a href="signup" className="font-semibold text-gray-500 unde">
                 Join Now
               </a>
             </p>

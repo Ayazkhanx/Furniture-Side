@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function page() {
   return (
     <div className='p-10 items-center'>
-      <div className='flex gap-8'>
+      <div className='flex gap-8 flex-col lg:flex-row'>
         {/* Image */}
         <div className='flex-shrink-0'>
           <Image src={pic} alt="Nike Air Force 1 PLT.AF.ORM" className='rounded-md h-auto' />
@@ -14,7 +14,7 @@ export default function page() {
 
         {/* Text */}
         <div className='flex-grow px-10 '>
-          <h1 className='text-6xl font-bold mb-8'>Nike Air Force 1 PLT.AF.ORM</h1>
+          <h1 className='lg:text-6xl font-bold text-4xl mb-8'>Nike Air Force 1 PLT.AF.ORM</h1>
           <p className='mb-4 text-1xl'>
             Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its `inside out`-inspired 
             construction,including unique layering and exposed foam accents, ups the ante on this timeless Jordan 
