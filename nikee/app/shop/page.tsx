@@ -1,34 +1,34 @@
 import React from 'react'
 import pic1 from '../../public/3.1.png'
-import pic2 from '../../public/3.1.png'
-import pic3 from '../../public/3.1.png'
-import pic4 from '../../public/3.1.png'
-import pic5 from '../../public/3.1.png'
-import pic6 from '../../public/3.1.png'
-import pic7 from '../../public/3.1.png'
-import pic8 from '../../public/3.1.png'
-import pic9 from '../../public/3.1.png'
-import pic10 from '../../public/3.1.png'
-import pic11 from '../../public/3.1.png'
-import pic12 from '../../public/3.1.png'
-import pic13 from '../../public/3.1.png'
-import pic14 from '../../public/3.1.png'
-import pic15 from '../../public/3.1.png'
-import pic16 from '../../public/3.1.png'
-import pic17 from '../../public/3.1.png'
-import pic18 from '../../public/3.1.png'
-import pic19 from '../../public/3.1.png'
-import pic20 from '../../public/3.1.png'
-import pic21 from '../../public/3.1.png'
-import pic22 from '../../public/3.1.png'
-import pic23 from '../../public/3.1.png'
-import pic24 from '../../public/3.1.png'
-import pic25 from '../../public/3.1.png'
-import pic26 from '../../public/3.1.png'
-import pic27 from '../../public/3.1.png'
-import pic28 from '../../public/3.1.png'
-import pic29 from '../../public/3.1.png'
-import pic30 from '../../public/3.1.png'
+import pic2 from '../../public/3.2.png'
+import pic3 from '../../public/3.3.png'
+import pic4 from '../../public/3.4.png'
+import pic5 from '../../public/3.44.png'
+import pic6 from '../../public/3.6.png'
+import pic7 from '../../public/3.7.png'
+import pic8 from '../../public/3.8.png'
+import pic9 from '../../public/3.9.png'
+import pic10 from '../../public/3.10.png'
+import pic11 from '../../public/3.11.png'
+import pic12 from '../../public/3.12.png'
+import pic13 from '../../public/3.44.png'
+import pic14 from '../../public/3.44.png'
+import pic15 from '../../public/3.44.png'
+import pic16 from '../../public/3.44.png'
+import pic17 from '../../public/3.44.png'
+import pic18 from '../../public/3.44.png'
+import pic19 from '../../public/3.19.png'
+import pic20 from '../../public/3.44.png'
+import pic21 from '../../public/3.23.png'
+import pic22 from '../../public/3.22.png'
+import pic23 from '../../public/3.23.png'
+import pic24 from '../../public/3.24.png'
+import pic25 from '../../public/3.25.png'
+import pic26 from '../../public/3.26.png'
+import pic27 from '../../public/3.27.png'
+import pic28 from '../../public/3.28.png'
+import pic29 from '../../public/3.29.png'
+import pic30 from '../../public/3.30.png'
 import { LuSettings2 } from "react-icons/lu";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
@@ -75,7 +75,7 @@ export default function page() {
     return (
       <div className='p-10 grid-rows-2'>
         <div className='flex justify-between items-center'>
-          <h1>New (500)</h1>
+          <h1 className='font-bold'>New (500)</h1>
           <div className='flex gap-4'>
             <h1>Hide Filters</h1>
             <LuSettings2 />
@@ -86,8 +86,8 @@ export default function page() {
   
         <div className='grid grid-cols-12 pt-2 gap-4'>
           {/* Filters Section */}
-          <div className='col-span-3 space-y-4'>
-            <div className='grid gap-2 p-4 border '>
+          <div className='lg:col-span-3 col-span-6 space-y-4'>
+            <div className='grid gap-2 p-4 border shadow-md'>
               <h1>Shoes</h1>
               <h1>Sports Bra</h1>
               <h1>Tops & T-shirts</h1>
@@ -103,7 +103,7 @@ export default function page() {
             </div>
   
             {/* Gender Filters */}
-            <div className='grid p-4 gap-2 border '>
+            <div className='grid p-4 gap-2 border shadow-md '>
               <div className='flex justify-between'>
                 <h1>Gender</h1>
                 <IoIosArrowUp />
@@ -123,7 +123,7 @@ export default function page() {
             </div>
   
             {/* Kids Filters */}
-            <div className='border p-4 grid gap-3'>
+            <div className='border p-4 grid gap-3 shadow-md'>
               <div className='flex justify-between'>
                 <h1>Kids</h1>
                 <IoIosArrowUp />
@@ -139,7 +139,7 @@ export default function page() {
             </div>
   
             {/* Price Filters */}
-            <div className='border p-4 grid items-center gap-3'>
+            <div className='border p-4 grid items-center shadow-md gap-3'>
               <div className='flex justify-between'>
                 <h1>Shop By Price</h1>
                 <IoIosArrowUp />
@@ -157,7 +157,7 @@ export default function page() {
           </div>
   
           {/* Products Section */}
-          <div className='col-span-9 grid lg:grid-cols-3 sm:grid-cols-1 gap-4'>
+          <div className='lg:col-span-9 col-span-12 grid lg:grid-cols-3 sm:grid-cols-1 gap-4'>
             {products.map((product, index) => (
               <div key={index} className='grid grid-cols-12 gap-4 border-b py-4'>
                 {/* Image */}
