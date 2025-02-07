@@ -8,10 +8,10 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 
 export default function CartPage() {
-    const [cart, setCart] = React.useState<Product[]>([])
+    const [cartItems, setCartItems] = React.useState<Product[]>([])
 
     useEffect(() => {
-        setCart(getCartItems())
+        setCartItems(getCartItems())
     }, [])
 
     const handleRemove = (id: string) => {
@@ -25,7 +25,7 @@ export default function CartPage() {
             confirmButtonText: 'Yes, remove it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                setCart(cart.filter((item) => item._id !== id))
+                setCartItems(cartItems.filter((item) => item._id !== id))
                 Swal.fire('Removed!', 'Your product has been removed.', 'success')
             }
         })
@@ -33,25 +33,25 @@ export default function CartPage() {
 
     const handleQuantityChange = (id: string, quantity: number) => {
         updateCartQuantity(id, quantity)
-        setCart(getCartItems())
+        setCartItems(getCartItems())
     }
 
     const handleIncrement = (id: string) =>  {
-        const product = cart.find((item) => item._id === id)
+        const product = cartItems.find((item) => item._id === id)
         if (product) {
             handleQuantityChange(id, product.inventory + 1)
         }
     }
 
     const handleDecrement = (id: string) =>  {
-        const product = cart.find((item) => item._id === id)
+        const product = cartItems.find((item) => item._id === id)
         if (product && product.inventory > 1) {
             handleQuantityChange(id, product.inventory - 1)
         }
     }
 
     const calculatedTotal = () => {
-        return cart.reduce((total, item) => total + item.price * item.inventory, 0)
+        return cartItems.reduce((total, item) => total + item.price * item.inventory, 0)
     }
 
     const router = useRouter()
@@ -70,7 +70,7 @@ export default function CartPage() {
                 Swal.fire('Success!', 'Your order has been Proceed. Check WishList', 'success')
             }
             router.push('/checkout')
-            setCart([])
+            setCartItems([])
         })
     }
 
@@ -78,7 +78,7 @@ export default function CartPage() {
         <div className="container mx-auto p-4">
             <h1 className="text-3xl font-bold text-center mb-6">Your Cart</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {cart.map((product) => (
+                {cartItems.map((product) => (
                     <div key={product._id} className="bg-white p-4 rounded-lg shadow-lg hover:scale-105 transition-all">
                         <Image 
                             src={urlFor(product?.image).url()} 
