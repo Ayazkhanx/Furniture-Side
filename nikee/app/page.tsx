@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import pic1 from '../public/3.1.png'
@@ -14,30 +15,49 @@ import pic10 from '../public/3.10.png'
 import pic11 from '../public/3.11.png'
 import pic12 from '../public/3.12.png'
 import pic13 from '../public/3.13.png'
+import pic17 from '../public/3.17.png'
+import pic18 from '../public/3.18.png'
+import pic20 from '../public/3.20.png'
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
+import Link from 'next/link'
 
 
 export default function Home() {
+
+  const [currentState, setCurrentState] = useState(0)
+  
+
+
   const products = [
     { name: 'Nike Air max Shoe', category: `women's Shoes`, id:1, price: '$120', image: pic6 },
-    { name: 'Nike Air 69 Shoe', category: `men's Shoes`, id:2, price: '$120', image: pic7 },
-    { name: 'Nike Air 96 Shoe', category: `men's Shoes`, id:3, price: '$120', image: pic8 },
-    { name: 'Nike Air 97 Shoe', category: `women's Shoes`, id:4, price: `$120`, image: pic9 }
+    { name: 'Nike Air max Shoe', category: `women's Shoes`, id:4, price: '$120', image: pic7 },
+    { name: 'Nike Air 96 Shoe', category: `men's Shoes`, id:5, price: '$120', image: pic8 },
+    { name: 'Nike Air 97 Shoe', category: `women's Shoes`, id:6, price: `$120`, image: pic9 },
   ]
 
   const products2 = [
     { image: pic2, id:5, category: `Man's`, name:'Nike Air max Shoe', price: `$120`},
     { image: pic3, id:6, category: `Man's`,  name:'Nike Air max Shoe', price: `$120`},
-    { image: pic4, id:7, category: `Women's`, name:'Nike Air max Shoe', price: `$120`}
+    { image: pic4, id:7, category: `Women's`, name:'Nike Air max Shoe', price: `$120`},
+    { image: pic17, id:8, category: `Women's`, name:'Nike Air max Shoe', price: `$120`},
+    { image: pic18, id:9, category: `Women's`, name:'Nike Air max Shoe', price: `$120`},
+    { image: pic20, id:10, category: `men's`, name:'Nike Air max Shoe', price: `$120`}
   ]
 
   const product3 = [
-    { name: ` Man's`, id: 8, image: pic11 },
-    { name: ` Man's`, id: 9, image: pic12 },
-    { name: ` Woman's`, id: 10, image: pic13 }
+    { name: ` Man's`, id: 11, image: pic11 },
+    { name: ` Man's`, id: 12, image: pic12 },
+    { name: ` Woman's`, id: 13, image: pic13 }
   ]
 
 
+  const handleInc = () => {
+    setCurrentState(currentState  => (currentState + 1) % products.length)
+    }
+
+    const handleDec = () => {
+      setCurrentState(currentState  => (currentState - 1 + products.length) % products.length)
+    }
 
   return (
     <div>
@@ -78,24 +98,27 @@ export default function Home() {
       <div className='grid-rows-2 p-10'>
         <div className='grid-rows-1 flex justify-between'>
           <h1 className='font-bold text-1xl'>Best of Air max</h1>
-          <div className='flex gap-2'>
+          <div className='flex gap-2 items-center'>
             <h1>Shop</h1>
-            <IoIosArrowBack />
-            <IoIosArrowForward />
+            <IoIosArrowBack  className='bg-gray-400 p-1' onClick={handleDec}/>
+            <IoIosArrowForward className='bg-gray-400 p-1' onClick={handleInc}/>
           </div>
         </div>
-        <div className='grid grid-cols-3 gap-4 mt-4'>
-          {products2.map((product) => (
+
+        
+        <div className='grid lg:grid-cols-3 gap-4 mt-4 transition-transform duration-200 ease-in-out'>
+          {products2.slice(currentState, currentState + 3).map((product) => (
             <div key={product.id} className='flex flex-col border-gray-400 rounded-md'>
-              <Image src={product.image} alt=''/>
-              <div className='flex flex-col justify-center items-center'>
-                <h1 className='text-lg'>{product.name}</h1>
-                <h1 className='text-lg'>{product.category}</h1>
-                <h1 className='text-lg'>{product.price}</h1>
+             <Link href={'products'}> <Image src={product.image} alt=''/></Link>
+              <div className='flex flex-col text-md font-bold justify-center items-center'>
+                <h1 >{product.name}</h1>
+                <h1 >{product.category}</h1>
+                <h1 >{product.price}</h1>
               </div>
             </div>
           ))}
         </div>
+        
       </div>
 
       {/* Home5 */}
@@ -114,7 +137,7 @@ export default function Home() {
             <p>Cause everyone should know the feeling of running in that perfect pair.</p>
           </div>
           <div className='flex justify-center items-center'>
-            <Button className='bg-black text-white'>Find Your Shoes</Button>
+            <Link href={'products'}><Button className='bg-black text-white'>Find Your Shoes</Button></Link>
           </div>
         </div>
       </div>
@@ -129,13 +152,13 @@ export default function Home() {
           <div className='flex flex-col'>
             <div className='flex gap-2 justify-end items-center'>
               <h1 className='text-lg'>Shoe</h1>
-              <IoIosArrowBack />
-              <IoIosArrowForward />
+              <IoIosArrowBack className='p-1 bg-gray-400' />
+              <IoIosArrowForward className='p-1 bg-gray-400' />
             </div>
             <div className='flex gap-4'>
               {products.slice(0, 2).map((product) => (
                 <div key={product.id} className='flex flex-col items-center'>
-                  <Image src={product.image} alt={product.name} className='object-cover' />
+                  <Link href={'products'}><Image src={product.image} alt={product.name} className='object-cover' /></Link>
                   <h2 className='text-sm'>{product.name}</h2>
                   <p className='text-sm'>{product.category}</p>
                   <p className='text-sm'>{product.price}</p>
@@ -148,13 +171,13 @@ export default function Home() {
           <div className='flex flex-col'>
             <div className='flex gap-2 justify-end items-center'>
               <h1 className='text-lg'>Shoe</h1>
-              <IoIosArrowBack />
-              <IoIosArrowForward />
+              <IoIosArrowBack className='p-1 bg-gray-400' />
+              <IoIosArrowForward className='p-1 bg-gray-400' />
             </div>
             <div className='flex gap-4'>
               {products.slice(2, 4).map((product) => (
                 <div key={product.id} className='flex flex-col items-center'>
-                  <Image src={product.image} alt={product.name} className='object-cover' />
+                  <Link href={'product'}><Image src={product.image} alt={product.name} className='object-cover' /></Link>
                   <h2 className='text-sm'>{product.name}</h2>
                   <p className='text-sm'>{product.category}</p>
                   <p className='text-sm'>{product.price}</p>
@@ -181,7 +204,7 @@ export default function Home() {
             <p>Your built-to-last, all-week wears—but with style only Jordan Brand can deliver.</p>
           </div>
           <div className='flex justify-center items-center'>
-            <Button className='bg-black text-white'>Shop</Button>
+            <Link href={'products'} ><Button className='bg-black text-white'>Shop</Button></Link>
           </div>
         </div>
       </div>
@@ -198,8 +221,8 @@ export default function Home() {
                 width={600} 
                 className="h-auto rounded"
               />
-              <h2 className="absolute bottom-4 right-4 bg-white rounded-md
-               text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">{product.name}</h2>
+              <h2 className="absolute bottom-4 left-4 p-3 bg-gray-600 rounded-lg
+               text-white font-bold opacity-1 ">{product.name}</h2>
             </div>
           ))}
         </div>

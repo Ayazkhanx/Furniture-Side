@@ -15,17 +15,17 @@ export default function Navbar() {
 
       <div className='flex font-bold gap-4'>
         <Link href={''}>New & Featured</Link>
-        <Link href={''}>Man</Link>
-        <Link href={''}>Women</Link>
-        <Link href={''}>Kids</Link>
+        <Link href={'men'}>Man</Link>
+        <Link href={'women'}>Women</Link>
+        <Link href={'kids'}>Kids</Link>
         <Link href={''}>Sale</Link>
         <Link href={''}>SNKRS</Link>
       </div>
 
-      <div className='flex gap-2 items-center'>
-        <input type="text" placeholder='Search Here' className='bg-gray-200 h-10 w-64 rounded-lg'/>
-        <CiHeart />
-        <IoBagOutline />
+      <div className='flex gap-4 items-center justify-center'>
+        <input type="text" placeholder='Search Here' className=' h-9 p-2 w-64 rounded-xl'/>
+        <Link href={'wishlist'}><CiHeart className='size-4'/></Link>
+        <Link href={'cart'}><IoBagOutline /></Link>
 
       </div>
     </div>

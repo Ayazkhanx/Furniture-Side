@@ -12,7 +12,7 @@ export default function page() {
   return (
     <div className='p-10 '>
   
-      <div className='grid justify-center items-baseline mb-8'>
+      <div className='grid justify-center items-baseline gap-6 mb-8'>
         <h1 className='text-4xl '>GET HELP</h1>
         <input type="text" className='border border-black bg-gray-100 rounded' />
       </div>

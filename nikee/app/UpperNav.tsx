@@ -13,8 +13,8 @@ export default function UpperNav() {
         
       </div>
       <div className='flex gap-4 '>
-        <h1>Find a store</h1>
-        <h1>Help</h1>
+        <Link href={'/'}><h1>Find a store</h1></Link>
+        <Link href={'help'} ><h1>Help</h1></Link>
         <Link href={'signup'}><h1>Join Us</h1></Link>
         <Link href={'signin'}><h1>Sign In</h1></Link>
       </div>
