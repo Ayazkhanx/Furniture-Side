@@ -10,7 +10,7 @@ import { client } from "@/sanity/lib/client"
 import { FaAngleRight } from "react-icons/fa6"
 import Swal from "sweetalert2"
 
-export default function page() {
+export default function Page() {
     const [cartItems, setCartItems] = useState<Product[]>([])
     const [discount, setDiscount] = useState(0)
     const [formValues, setFormValues] = useState({

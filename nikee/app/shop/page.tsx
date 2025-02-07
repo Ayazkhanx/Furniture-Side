@@ -15,7 +15,7 @@ import { MdCheckBoxOutlineBlank } from "react-icons/md";
 
 
 
-export default function page() {
+export default function Page() {
 
   const [product, setProduct] = useState<Product[]>([])
   

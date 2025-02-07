@@ -9,7 +9,7 @@ import React, { useEffect, useState } from 'react'
 import Swal from'sweetalert2'
 import { addtoCart } from '../action/action'
 
-export default function page() {
+export default function Page() {
 
     const [product, setProduct] = useState<Product[]>([])
 

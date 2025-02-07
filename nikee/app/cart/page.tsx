@@ -1,6 +1,6 @@
 'use client'
 import { Product } from '@/types/products'
-import React, { useEffect, useState} from 'react'
+import React, { useEffect } from 'react'
 import { getCartItems, updateCartQuantity } from '../action/action'
 import Swal from 'sweetalert2'
 import { urlFor } from '@/sanity/lib/image'
