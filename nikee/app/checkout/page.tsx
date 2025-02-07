@@ -7,7 +7,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { urlFor } from "@/sanity/lib/image"
 import { client } from "@/sanity/lib/client"
-import { FaAngleRight } from "react-icons/fa6";
+import { FaAngleRight } from "react-icons/fa6"
+import Swal from "sweetalert2"
 
 export default function page() {
     const [cartItems, setCartItems] = useState<Product[]>([])
@@ -61,15 +62,27 @@ export default function page() {
 
     const handlePlaceOrder = async () => {
 
-        if (validateForm()) {
-            localStorage.removeItem('cart')
-            localStorage.removeItem('appliedDiscount')
-            alert('Order placed successfully')
-        } else {
-            alert('Please fill in all required fields')
+        Swal.fire({
+            title: 'Processing Order..',
+            text: 'Please wait a moment...',
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Proceed'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                if(validateForm()) {
+                    localStorage.removeItem('appliedDiscount')
+                Swal.fire('Success!', 'Your order has been Proceed. Check WishList', 'success')
+            } else {
+                Swal.fire('Error!', 'Please fill in all required fields', 'error')
+            }
         }
+        })
 
-        const orderData = {
+
+        const  orderData = {
             _type: 'order',
             name: formValues.name,
             email: formValues.email,
@@ -77,9 +90,9 @@ export default function page() {
             phone: formValues.phone,
             city: formValues.city,
             postalCode: formValues.postalCode,
-            items: cartItems.map((item) => ({ 
+            cartItems: cartItems.map((product) => ({ 
                 _type: 'refrence',
-                _ref: product.id
+                _ref: product._id
             })),
             discount: discount,
             orderDate: new Date().toISOString

@@ -55,7 +55,8 @@ export default function page() {
                 <p>{product.price}</p>
                 
                 <button className='bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:shadow-lg
-                hover:scale-110 transition-transform duration-300 ease-in-out' onClick={(e) => handleAddtoCart(e, product)}>Add to Cart</button>
+                hover:scale-110 transition-transform duration-300 ease-in-out' 
+                onClick={(e) => handleAddtoCart(e, product)}>Add to Cart</button>
                 </Link>
               </div>  
         ))
