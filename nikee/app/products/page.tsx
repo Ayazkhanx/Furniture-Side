@@ -28,6 +28,7 @@ export default function Page() {
       Swal.fire({
         position: 'top-right',
         icon: 'success',
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         title: `${product.productName} added to cart!`,
         showConfirmButton: false,
         timer: 4000,
